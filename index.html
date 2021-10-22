@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendlist</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>FriendList</h1>
+    </header>
+
+    <section id="contact">
+        <ul>
+            <li class="list" v-for="friend in friends" :key="friend.id">
+                <h2>{{ friend.name }}</h2>
+                 <hr>
+                <button>Show Details</button>
+                <div class="pe1">
+                    <strong>Phone:</strong> {{ friend.phone }}
+                </div>
+
+                <div class="pe1">
+                     <strong>Email:</strong> {{ friend.email}}
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+</body>
+</html>
